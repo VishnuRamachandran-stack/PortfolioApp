@@ -1,0 +1,19 @@
+h1{
+    text-align: center;
+    background-color: black;
+    color: aliceblue;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    background-color: bisque;
+}
+
+
+
+li{
+    text-align: center;
+    margin-right: 40px;
+}
