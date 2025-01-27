@@ -23,3 +23,24 @@
     </div> 
 </div>
 
+<div *ngIf="error">{{ error }}</div>
+<div *ngIf="successMessage" class="success">{{ successMessage }}</div>
+
+<div>
+    <h3>Add New Skill</h3>
+    <form (ngSubmit)="addSkill()">
+      <label>Title:</label>
+      <input type="text" [(ngModel)]="newSkill.title" name="title" required><br><br>
+  
+      <label>Body:</label>
+      <input type="text" [(ngModel)]="newSkill.body" name="body" required><br><br>
+  
+      <label>User Id:</label>
+      <input type="text" [(ngModel)]="newSkill.userId" name="userId" required><br><br>
+  
+      <button type="submit">Add Details</button>
+    </form>
+</div>
+
+
+
