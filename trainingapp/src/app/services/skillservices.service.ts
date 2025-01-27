@@ -9,8 +9,7 @@ export class SkillservicesService {
 
   _http : HttpClient ;
   postDetails : any  ;
-  private apiUrl = 'https://jsonplaceholder.typicode.com/posts'; // API endpoint for skill sets
-
+  private apiUrl = 'https://skillsetwebapp.azurewebsites.net/api/UserDetails'; // API endpoint for skill sets
 
   getPostDetails(){
 

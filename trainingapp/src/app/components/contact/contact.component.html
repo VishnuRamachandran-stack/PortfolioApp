@@ -2,42 +2,30 @@
     <h2>Contact Me</h2>
     
     <div class="contact-details">
-        <p><strong>Name:</strong> {{name}}</p>
-        <p><strong>Phone:</strong> {{phone}}</p>
-        <p><strong>Email:</strong> <a href="mailto:youremail@example.com">{{email}}</a></p>
+        <p><strong>Name:</strong> {{ownName}}</p>
+        <p><strong>Phone:</strong> {{ownPhone}}</p>
+        <p><strong>Email:</strong> <a href="mailto:youremail@example.com">{{ownEmail}}</a></p>
     </div>
 <br>
 <br>
-    <div class="contact-form">
-
-        <p>If you have any questions or would like to collaborate, feel free to reach out using the form below!</p>
-        
-        <form id="contact-form">
-          
-            <input type="text" id="name" name="name" required placeholder="Your Name"><hr>
-            <input type="text" id="phone" name="phone" required placeholder="Your Phone No."><hr>
-            <input type="email" id="email" name="email" required placeholder="Your Email"><hr>
-            <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>   <hr>        
-            <button type="submit">Contact Me</button>
-        </form>
-    </div> 
-</div>
 
 <div *ngIf="error">{{ error }}</div>
 <div *ngIf="successMessage" class="success">{{ successMessage }}</div>
 
 <div>
-    <h3>Add New Skill</h3>
-    <form (ngSubmit)="addSkill()">
-      <label>Title:</label>
-      <input type="text" [(ngModel)]="newSkill.title" name="title" required><br><br>
+    <h3>Post your Details</h3>
+    <form #formName="ngForm" (ngSubmit)="addSkill(formName)">
+      <label>Enter your name:</label>
+      <input type="text" [(ngModel)]="newUser.name" name="name" required><br><br>
   
-      <label>Body:</label>
-      <input type="text" [(ngModel)]="newSkill.body" name="body" required><br><br>
+      <label>Phone number:</label>
+      <input type="text" [(ngModel)]="newUser.phone_number" name="phone_number" required><br><br>
   
-      <label>User Id:</label>
-      <input type="text" [(ngModel)]="newSkill.userId" name="userId" required><br><br>
+      <label>Email Id:</label>
+      <input type="text" [(ngModel)]="newUser.email" name="email" required><br><br>
   
+      <label>Enter your message:</label>
+      <input type="text" [(ngModel)]="newUser.message" name="message" required><br><br>
       <button type="submit">Add Details</button>
     </form>
 </div>

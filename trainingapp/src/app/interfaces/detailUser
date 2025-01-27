@@ -1,0 +1,6 @@
+export interface detailUser {
+    FullName:string;
+    PhoneNumber:string;
+    Email:string;
+    Message:string;
+}
